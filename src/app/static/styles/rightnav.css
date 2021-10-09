@@ -1,0 +1,56 @@
+.right-nav {
+    float: right;
+    width: 150px;
+    z-index: 1;
+    margin-top: -50px;
+    margin-right: 0px;
+    height: 2000px;
+    background-color: whitesmoke;
+    margin-bottom: -30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.right-nav-label {
+    width: 100px;
+    height: 48px;
+    font-size: 1em;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 0px;
+    border: none;
+    font-family: 'Palatino';
+    border-bottom: 2px solid transparent;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    /* Центрирует текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.right-nav-btn {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 0px;
+    border: none;
+    font-family: 'Palatino';
+    font-size: 15px;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    border-left: 2px solid transparent;
+    /* Центрирует текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right-nav-btn:hover {
+    background-color: white;
+    border-left: 2px solid rgb(255, 198, 41);
+}
