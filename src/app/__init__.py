@@ -6,7 +6,7 @@ import config
 
 # создание экземпляра приложения
 app = Flask(__name__)
-app.config.from_object(os.environ.get('FLASK_ENV')
+app.config.from_object(config.test_config_name
                        or 'config.DevelopementConfig')
 
 # инициализирует расширения

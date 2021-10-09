@@ -25,8 +25,6 @@ def render_gp_content(url='', genre='', current_page='', p=''):
         current_page = current_page or '1'
         url = f'{genre}/page/{current_page}/'
 
-    print('Выбранная страница:', current_page)
-
     game_previews, pages = get_game_previews(url)
     content_block = render_template(
         'gp_content_block.html',

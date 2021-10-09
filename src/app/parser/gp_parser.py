@@ -18,7 +18,7 @@ def get_game_previews(main_url: str):
 
     if not main_url.startswith('https'):
         main_url = TORRENT_IGRUHA_DOMEN + main_url[0:]
-    print(main_url)
+
     try:
         r = requests.get(main_url)
         r.encoding = 'utf-8'
@@ -40,7 +40,6 @@ def get_game_previews(main_url: str):
         # Страницы
         try:
             page_div = soup.find('div', id='pages')
-            x1 = False
             for tag in page_div.childGenerator():
                 if not tag.text == ' ':
                     url: str = ''
@@ -71,7 +70,6 @@ def get_game_previews(main_url: str):
 def get_game_desc(main_url: str):
     if not main_url.startswith('https'):
         main_url = TORRENT_IGRUHA_DOMEN + main_url[0:]
-    print(main_url)
 
     r = requests.get(main_url)
     r.encoding = 'utf-8'
