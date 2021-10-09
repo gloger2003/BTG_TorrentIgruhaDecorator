@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTG 4U</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        {% include "topnav.html" %}
+    </div>
+</body>
+
+<script src="../static/renders.js"></script>
+<script> render_gp_content('/newgames/') </script>
+
+<style>
+    body, html {
+        width: 98%;
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 60px;
+
+        background-color: rgb(40, 40, 40);
+    }
+
+    #main {
+        width: 800px;
+        min-width: 800px;
+        max-width: 800px;
+        margin: auto;
+        height: 100%;
+        margin-bottom: -100px;
+    }
+
+    #content-block {
+        width: 760px;
+        height: max-content;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        margin-left: -10px;
+        margin-top: 20px;
+        position: absolute;
+        padding: 20px;
+        display: block;
+    }
+</style>
+
+</html>

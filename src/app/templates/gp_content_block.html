@@ -1,0 +1,82 @@
+<div id="content-block">
+    {% for game_preview in game_previews %}
+        {% set classname = "game-preview-card" %}
+        {% if loop.first %}
+            {% set classname = "game-preview-card first-card" %}
+        {% endif %}
+        <div class="{{ classname }}" href="{{ game_preview.url }}">
+            <a class="a-preview" href="{{ game_preview.url }}">
+                <img class="img-preview" width="100px" height="140px" src="{{ game_preview.image }}" alt="" srcset="">
+            </a>
+            <div class='preview-data'>
+                <span class="title" href="{{ game_preview.url }}">{{ game_preview.title }}</span>
+                <div class="desc"></div>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="last-card-for-pagination">
+
+    </div>
+
+<style>
+    .game-preview-card {
+        height: 150px;
+        width: 750px;
+        text-align: right center;
+
+        border-radius: 10px;
+        border: none;
+    
+        padding-top: 10px;
+        padding-left: 10px;
+
+        margin-top: 10px;
+        margin-left: auto;
+
+        display: inline-flex;
+    }
+    .game-preview-card img {
+        border-radius: 10px;
+    }
+    .game-preview-card:hover {
+        background-color: rgb(224, 224, 224);
+    }
+    .first-card {
+        margin-top: 0px;
+    }
+
+
+    .preview-data {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .desc {
+        margin-top: 10px;
+    }
+
+
+    .title {
+        font-weight: bold;
+        font-size: 20px;
+
+        cursor: pointer;
+        height: 30px;
+    }
+
+    .last-card-for-pagination{
+        height: 100px;
+        width: 750px;
+        text-align: right center;
+
+        border-radius: 10px;
+        border: none;
+    
+        padding-top: 10px;
+        padding-left: 10px;
+
+        margin-top: 10px;
+        margin-left: auto;
+
+        display: inline-flex;
+    }
+</style>

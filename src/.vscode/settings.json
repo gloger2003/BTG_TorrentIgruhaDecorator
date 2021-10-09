@@ -1,0 +1,8 @@
+{
+    "code-runner.executorMap": {
+        "bat": "",
+        "python": "python -u runner.py",
+    },
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.enabled": true
+}

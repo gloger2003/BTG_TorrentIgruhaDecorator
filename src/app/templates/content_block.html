@@ -1,0 +1,8 @@
+{{ content_block|safe }}
+{{ pagination_block|safe }}
+
+<script>
+    if (window.scrollY > 100) {
+        $('html, body').animate({scrollTop: '0px'}, 1000);
+    }
+</script>

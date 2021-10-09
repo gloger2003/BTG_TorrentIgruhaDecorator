@@ -1,0 +1,41 @@
+<div id="content-block">
+    {% for genre in genres %}
+        {% set classname = "genre-btn" %}
+        {% if loop.first %}
+            {% set classname = "genre-btn first-btn" %}
+        {% endif %}
+        <div class="{{ classname }}" onclick="render_gp_content('{{ genre.url }}')">{{ genre.name }}</div>
+    {% endfor %}
+</div>
+
+<style>
+    .genre-btn {
+        height: 50px;
+        width: 750px;
+
+        text-align: center;
+
+        font-size: 20px;
+        font-weight: bold;
+
+        border-radius: 10px;
+        border: none;
+    
+        padding-top: 10px;
+        padding-left: 10px;
+
+        margin-top: 10px;
+        margin-left: auto;
+
+
+        cursor: pointer;
+    }
+    .genre-btn:hover {
+        background-color: rgb(224, 224, 224);
+        color: rgb(0, 162, 255);
+    }
+
+    .first-btn {
+        margin-top: 0px;
+    }
+</style>
