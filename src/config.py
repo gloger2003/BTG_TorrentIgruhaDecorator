@@ -1,6 +1,7 @@
 import os
 
-test_config_name = 'config.TestingConfig'
+# test_config_name = 'config.TestingConfig'
+test_config_name = ''
 
 app_dir = os.path.abspath(os.path.dirname(__file__))
 
@@ -21,7 +22,7 @@ class DevelopementConfig(BaseConfig):
 class TestingConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TESTING_DATABASE_URI') or \
-        'sqlite3://root@localhost/TorrentIgruha'
+        'sqlite3:///TorrentIgruha.db'
 
 
 class ProductionConfig(BaseConfig):
