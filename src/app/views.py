@@ -3,8 +3,8 @@ from flask import (request, session, redirect,
                    url_for, render_template, flash)
 from app.models import Genre
 
-from app.parser.genres_parser import update_genres_in_db
-from app.parser.gp_parser import get_game_desc, get_game_previews
+from app.parsers.genres_parser import update_genres_in_db
+from app.parsers.gp_parser import get_game_desc, get_game_previews
 
 from pprint import pprint
 
